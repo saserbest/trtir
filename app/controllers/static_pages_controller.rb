@@ -1,7 +1,10 @@
 class StaticPagesController < ApplicationController
-  def home
+  def anasayfa
   end
 
-  def help
+  def yardim
+  end
+
+  def hakkimizda
   end
 end
