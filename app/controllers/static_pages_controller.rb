@@ -7,4 +7,8 @@ class StaticPagesController < ApplicationController
 
   def hakkimizda
   end
+
+  def iletisim
+  	
+  end
 end

@@ -1,7 +1,11 @@
 Trtir::Application.routes.draw do
-  get "static_pages/anasayfa"
-  get "static_pages/yardim"
-  get "static_pages/hakkimizda"
+  get "users/new"
+  root 'static_pages#anasayfa'
+  match '/kayitol', to: 'users#new', via: 'get'
+  match '/yardim', to:'static_pages#yardim', via: 'get'
+  match '/hakkimizda', to:'static_pages#hakkimizda', via: 'get'
+  match '/iletisim', to:'static_pages#iletisim', via: 'get'
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -16,7 +20,6 @@ Trtir::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
   # Example resource route with options:
   #   resources :products do
   #     member do
